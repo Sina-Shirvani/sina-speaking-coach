@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153f37">
+  <title>Speaking practice with Sina’s AI Coach</title>
+  <meta name="description" content="Practise spoken English with an adaptive AI coach in your browser.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif&display=swap');
+    *{box-sizing:border-box}body{margin:0;background:#f4f2eb;color:#183c35;font-family:'DM Sans',sans-serif;line-height:1.6}main{max-width:1080px;margin:auto;padding:30px 28px 60px}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ccd3c9;padding-bottom:22px}.brand{font-weight:700;letter-spacing:-.03em;font-size:20px}.limit{font-size:13px;color:#526c61}.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center;min-height:570px}h1{font-family:'Instrument Serif',serif;font-size:clamp(48px,6vw,76px);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin:0 0 25px}.intro{font-size:18px;color:#52665e;max-width:460px}.instructions{margin-top:30px;padding-top:23px;border-top:1px solid #ccd3c9;font-size:14px;color:#52665e}.call-card{padding:28px;background:#fffefa;border:1px solid #d6d9cb;border-radius:24px;box-shadow:0 18px 60px #183c350c}.call-card h2{font-size:20px;margin:0 0 8px}.call-card p{font-size:14px;color:#52665e;margin:0 0 18px}#dograh-inline-container{min-height:240px;display:grid;align-content:center}#loading-status{font-size:14px;color:#52665e;text-align:center;padding:20px}.privacy{font-size:12px!important;border-top:1px solid #e1e4da;padding-top:18px;margin:18px 0 0!important}.details{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;border-top:1px solid #ccd3c9;padding-top:28px}.details h2{font-size:16px;margin:0 0 6px}.details p{font-size:14px;color:#52665e;margin:0}footer{margin-top:40px;font-size:12px;color:#647469}@media(max-width:720px){main{padding:22px 20px 40px}.hero{grid-template-columns:1fr;gap:26px;padding:42px 0;min-height:0}h1{font-size:56px}.call-card{padding:22px}.details{grid-template-columns:1fr;gap:22px}.limit{max-width:100px;text-align:right}}
+  </style>
+</head>
+<body>
+<main>
+  <header><span class="brand">Sina’s AI Coach</span><span class="limit">English speaking practice</span></header>
+  <section class="hero" aria-label="Start speaking practice">
+    <div>
+      <h1>Find your voice.<br>One conversation<br>at a time.</h1>
+      <p class="intro">Practise real conversations with a patient AI English coach. Start at your level, work on your goals, and get focused feedback.</p>
+      <p class="instructions">Use headphones if you can. Choose Start speaking, allow microphone access, and say hello. Sessions last up to 20 minutes.</p>
+    </div>
+    <section class="call-card" aria-label="Voice call">
+      <h2>Your next conversation starts here</h2>
+      <p>Tell the coach your goal. You can ask it to slow down, repeat, change the exercise, or stop at any time.</p>
+      <div id="dograh-inline-container"><div id="loading-status" role="status">Loading the voice coach…</div></div>
+      <p class="privacy">Your voice is processed by Dograh and its AI providers. Calls may be logged. The coach asks permission to save practice notes in Sina’s private progress tracker. Share only what you’re comfortable discussing.</p>
+    </section>
+  </section>
+  <section class="details" aria-label="Practice guidance">
+    <div><h2>Begin at your level</h2><p>Take a short speaking assessment or ask to start Foundation, Intermediate, or Advanced practice.</p></div>
+    <div><h2>Keep the conversation moving</h2><p>Try everyday situations, interviews, workplace conversations, or a topic you choose.</p></div>
+    <div><h2>Leave with something to practise</h2><p>Ask for a short recap, useful corrections, and one speaking task for next time.</p></div>
+  </section>
+  <footer>AI feedback is guidance for practice. Level estimates are informal.</footer>
+</main>
+<!-- Dograh Widget -->
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://app.dograh.com/embed/dograh-widget.js?token=emb_39Mq3lqFuyY58wZ5rhnC2WVLtBw1COt05MkLq8xAFt8&environment=production&apiEndpoint=https://api.dograh.com';
+    // Details about this visitor, available in your prompts as
+    // {{initial_context.page_url}}. Edit these or add your own.
+    js.setAttribute('data-dograh-context', JSON.stringify({
+      page_url: window.location.href,
+      today: new Date().toISOString().slice(0, 10)
+    }));
+    js.async = true;
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'dograh-widget'));
+</script>
+</body>
+</html>
